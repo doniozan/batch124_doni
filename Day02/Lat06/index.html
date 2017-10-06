@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Batch 124</title>
+</head>
+<body>
+        <a href="../Menu/index.html">Menu</a><br>
+    <script>
+        var ukuran={n:21, ganjil:1, genap:0};
+        var n=(ukuran.n-1)/((ukuran.n-1)/2);
+        ukuran.genap=ukuran.n-1;
+        for (var i = 0; i < ukuran.n; i++) {
+            for (var j = 0; j < ukuran.n; j++) {
+                if (i+j>=ukuran.n-1) {
+                    if (ukuran.genap*n>=10) {
+                    document.write(ukuran.genap*n+"&ensp;");
+                    }
+                    else{
+                        document.write(ukuran.genap*n+"&ensp;"+"&ensp;");
+                        }
+                }
+                else{
+                    document.write("&ensp;"+"&ensp;"+"&ensp;");
+                }
+            }
+            ukuran.genap=ukuran.genap-1;
+            document.write("<br>");
+
+        } 
+        </script>
+</body>
+</html>

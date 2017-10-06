@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../src/baselogic.js"></script>
+    <script src="../src/index.js"></script>
+    <script src="../src/utility.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        baselogic.Nilai = 9;
+        baselogic.NilaiTengah = (baselogic.Nilai - 1) / 2;
+        baselogic.NilaiPanjang = baselogic.Nilai;
+        baselogic.Nilailebar = baselogic.Nilai;
+        baselogic.Array1D = new Array(baselogic.NilaiPanjang);//panjang = nilai i
+        baselogic.Array2D = new Array(baselogic.NilaiLebar); // lebar=nilai j
+        for (var array = 0; array < baselogic.NilaiPanjang; array++) {
+            baselogic.Array2D[array] = new Array(baselogic.NilaiPanjang);
+
+        }
+
+        baselogic.NilaiBatasAtas = 0;
+        baselogic.NilaiBatasBawah = baselogic.NilaiLebar;
+        baselogic.NIlaiBatasKiri = 0;
+        baselogic.NilaiBatasKanan = baselogic.NilaiPajang;
+        // fibo
+        cUtility.fibo();
+
+        // isi Array 2D 
+        for (var bangun = 0; bangun < baselogic.NilaiTengah; bangun++) {
+            for (var i = baselogic.NilaiBatasAtas; i < baselogic.NilaiBatasBawah; i++) {
+                for (var j = baselogic.NIlaiBatasKiri; j < baselogic.NilaiBatasKanan; j++) {
+                    baselogic.Array2D[i][j]=baselogic.Array1D[bangun];
+                    
+                }
+                
+            }
+            baselogic.NilaiBatasAtas++;
+            baselogic.NilaiBatasBawah--;
+            baselogic.NilaiBatasKiri++;
+            baselogic.NilaiBatasKanan--;
+        }
+        // cetak
+        cUtility.CetakHasil();
+    </script>
+</body>
+
+</html>

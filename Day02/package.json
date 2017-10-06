@@ -1,0 +1,16 @@
+{
+  "name": "day03",
+  "version": "1.0.0",
+  "description": "latihan hari 3",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server --port 8887",
+    "start":"npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "batch12403",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
